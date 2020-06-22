@@ -481,7 +481,7 @@
 <p>前面我们提到，傅立叶变换是将时域信号转换为频域信号，它们可以看成是三维空间。而傅立叶变换可以看成信号（向量）是从时域三维空间线性变换到频域三维空间。</p>
 <p>因此我们可以把傅立叶变换前的三维空间用一组<strong>正交基</strong>（1，sinwt，coswt）来描述。</p>
 <p>试想我们如果用变换前的波形（向量）来点乘一个与在sinwt与coswt面上的向量（这里我们一般用的是<u>sinwt+icoswt</u> <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> <strong>欧拉公式</strong>），那么与w不相关的部分都会被消掉（垂直向量的点积为0），于是我们就得到分解出来的弦波（分连续和离散两种情况，离散就是弦波相加&lt;傅立叶级数&gt;，连续可看作是无穷区间上的定积分）。</p>
-<h3 id="欧拉公式-欧拉公式维基百科-——复平面与三角函数的桥梁">[欧拉公式][欧拉公式维基百科]——复平面与三角函数的桥梁</h3>
+<h3 id="欧拉公式——复平面与三角函数的桥梁"><a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F" target="_blank" rel="noopener" title="欧拉公式">欧拉公式</a>——复平面与三角函数的桥梁</h3>
 <p><img style="width:50%;height:50%" src="http://i2.tiimg.com/721720/04f49c43a7a54f65.png "/><img style="width:50%;height:50%" src="http://i1.fuimg.com/721720/2f7e3013efe8b905.png "/></p>
 <p>由于欧拉公式的存在，那么我们很容易想到，把上面的复平面 sinwt+icoswt（正交向量线性组合，可以扩展向量空间维度），替换为<strong>e</strong>的-i𝛚t次方（加负号不影响代表该平面，在复平面上角速度方向变为顺时针）。<br>
 于是我们就得到了连续傅立叶变换的表达式：</p>
@@ -521,8 +521,7 @@
 </li>
 <li id="fn2" class="footnote-item"><p>指在对函数或信号进行分析时，分析其和频率有关部份，而不是和时间有关的部份，和时域一词相对。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn3" class="footnote-item"><p>复数实际上是一种用一个数就能标识二维坐标的标记，通过这种写法我们可以表示一个平面。此处这个平面是振幅和相位的二维平面。<br>
-[欧拉公式维基百科]: <a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/欧拉公式</a> “欧拉公式” <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+<li id="fn3" class="footnote-item"><p>复数实际上是一种用一个数就能标识二维坐标的标记，通过这种写法我们可以表示一个平面。此处这个平面是振幅和相位的二维平面。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
