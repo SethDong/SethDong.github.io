@@ -403,7 +403,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-28
+                    2020-07-05
                 </div>
                 
 
@@ -443,7 +443,7 @@
 <li>美颜软件是怎么做到磨皮的？音频和图片压缩是怎么做到的？无线通信又是如何做到的？下面的视频中的字母是如何画出来的？</li>
 </ul>
 </blockquote>
-<p><img src="https://i2.tiimg.com/721720/faa217de58dbccab.gif" alt="100个向量绘制图形" title="100个向量绘制图形"><br>
+<p><img src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH.GIF" alt="100个向量绘制图形" title="100个向量绘制图形"><br>
 其实这一切的最根本的原理都是——傅立叶变换。</p>
 <hr>
 <h2 id="何为傅立叶变换">何为傅立叶变换</h2>
@@ -462,13 +462,13 @@
 <p>所说的信号从时域向频域转换，实质上就是把在时域的三个维度（时间、振幅、相位）转变到频域的三个维度（频率、振幅、相位）。各位可以自己画出三维坐标系体会一下。</p>
 <h3 id="离散or连续">离散or连续</h3>
 <div align=center>
-<img style="width:50%;height:45%" src="http://i2.tiimg.com/721720/c09e9ca6fea75b32.png "align=center />
+<img style="width:50%;height:45%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E6%88%AA%E5%B1%8F2020-06-22%20%E4%B8%8A%E5%8D%881.31.43.png "align=center />
 </div>
 对于连续的时域信号，分周期性和非周期性信号，它们所对应的频域信号分别是连续的和离散的。
 <p>有限个不同频率的弦波所做的叠加，构成的波，如果对它进行傅立叶变换，得到的频谱图，频率维度的取值就是离散的。这对应于傅立叶级数。</p>
 <p>而一般情况下，自然界中的信号都是可以有无限个弦波叠加而来的，我们无法把它们穷举出来。而且这些自然界信号都是非周期性的。对应于连续傅立叶变换。</p>
 <div align=center>
-<img style="width:45%;height:45%" src="http://i2.tiimg.com/721720/adf9ff674c017458.jpg " alt="离散频谱图" /><img style="width:45%;height:45%" src="http://i2.tiimg.com/721720/1be9444bdd9884a4.jpg " alt="连续频谱图" />
+<img src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E7%A6%BB%E6%95%A3%E5%92%8C%E8%BF%9E%E7%BB%AD.jpeg " alt="离散和连续频谱图" />
 <p> <i>请原谅我的字丑。。。</i></p>
 </div>
 <p>这也是为什么在连续傅立叶变换时使用的数学工具需要用到“积分变换”——针对连续问题。</p>
@@ -479,20 +479,20 @@
 <p>因此我们可以把傅立叶变换前的三维空间用一组<strong>正交基</strong>（1，sinwt，coswt）来描述。</p>
 <p>试想我们如果用变换前的波形（向量）来点乘一个与在sinwt与coswt面上的向量（这里我们一般用的是<u>sinwt+icoswt</u> <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> <strong>欧拉公式</strong>），那么与w不相关的部分都会被消掉（垂直向量的点积为0），于是我们就得到分解出来的弦波（分连续和离散两种情况，离散就是弦波相加&lt;傅立叶级数&gt;，连续可看作是无穷区间上的定积分）。</p>
 <h3 id="欧拉公式——复平面与三角函数的桥梁"><a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F" target="_blank" rel="noopener" title="欧拉公式">欧拉公式</a>——复平面与三角函数的桥梁</h3>
-<p><img style="width:50%;height:50%" src="http://i2.tiimg.com/721720/04f49c43a7a54f65.png "/><img style="width:50%;height:50%" src="http://i1.fuimg.com/721720/2f7e3013efe8b905.png "/></p>
+<p><img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/oula.png "/><img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F.png "/></p>
 <p>由于欧拉公式的存在，那么我们很容易想到，把上面的复平面 sinwt+icoswt（正交向量线性组合，可以扩展向量空间维度），替换为<strong>e</strong>的-i𝛚t次方（加负号不影响代表该平面，在复平面上角速度方向变为顺时针）。<br>
 于是我们就得到了连续傅立叶变换的表达式：</p>
-<img style="width:50%;height:50%" src="http://i1.fuimg.com/721720/e1437990f22475f0.png " align=center />
-<img style="width:50%;height:50%" src="http://i2.tiimg.com/721720/2c3cfaf4c91927f9.png " align=center />
+<img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E8%BF%9E%E7%BB%AD%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2.png" align=center />
+<img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%A7%92%E9%80%9F%E5%BA%A6.png" align=center />
 <!--![连续傅立叶变换][连续傅立叶变换]-->
 <hr>
 <h2 id="傅立叶变换的应用">傅立叶变换的应用</h2>
 <h3 id="1-利用傅立叶变换原理来绘制图形（曲线拟合曲线）">1.利用傅立叶变换原理来绘制图形（曲线拟合曲线）</h3>
 <div align=center>
-<img style="width:40%;height:40%" src="http://i2.tiimg.com/721720/12454f321a9cc996.gif " />
-<img style="width:40%;height:40%" src="http://i2.tiimg.com/721720/785516a0f498a199.gif"  />
-<img style="width:40%;height:40%" src="https://i2.tiimg.com/721720/faa217de58dbccab.gif "/>
-<img style="width:40%;height:40%" src="http://i2.tiimg.com/721720/52e864707f01fecb.gif "/>
+<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_30v.GIF" />
+<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_50v.GIF"  />
+<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH.GIF"/>
+<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_1000v.GIF"/>
 </div>
 动图依次是由30个、50个，100个，1000个傅立叶变换所得弦波拟合我所自定义图形的过程。
 <p>其中的圆表示的是各个频率正弦波，半径为振幅，向量箭头初始位置由相位决定，圆转一周的速度由频率决定，所有的向量叠加决定了该时间点最后指向的位置。</p>
