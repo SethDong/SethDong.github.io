@@ -324,6 +324,12 @@ header .brand-logo .logo-span {
     font-size: 2rem;
 }
 
+@media only screen and (max-width: 601px) {
+   header .brand-logo .logo-span {
+    font-size: 2rem;
+    display:none;
+    }
+}
 /*修改顶部 logo 的文字垂直对齐为 top，避免默认 middle 看起来偏下*/
 header .brand-logo .waves-effect {
     vertical-align: top;
