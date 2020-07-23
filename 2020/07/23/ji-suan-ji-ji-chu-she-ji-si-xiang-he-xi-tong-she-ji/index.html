@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数学之美——傅立叶变换的本质, Seth&#39;s Blogs">
+    <meta name="keywords" content="计算机基础——计算机设计思想以及系统设计, Seth&#39;s Blogs">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数学之美——傅立叶变换的本质 | Seth&#39;s Blogs</title>
+    <title>计算机基础——计算机设计思想以及系统设计 | Seth&#39;s Blogs</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数学之美——傅立叶变换的本质</h1>
+                    <h1 class="description center-align post-title">计算机基础——计算机设计思想以及系统设计</h1>
                 </div>
             </div>
         </div>
@@ -367,12 +367,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">
-                                <span class="chip bg-color">微积分</span>
+                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/">
+                                <span class="chip bg-color">设计思想</span>
                             </a>
                         
-                            <a href="/tags/%E5%82%85%E7%AB%8B%E5%8F%B6/">
-                                <span class="chip bg-color">傅立叶</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
+                                <span class="chip bg-color">计算机组成</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%80%A7%E8%83%BD/">
+                                <span class="chip bg-color">性能</span>
                             </a>
                         
                     </div>
@@ -383,8 +387,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
-                                数学
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                计算机基础
                             </a>
                         
                     </div>
@@ -396,28 +400,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-21
+                    2020-07-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-05
+                    2020-07-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    15 分
                 </div>
                 
 
@@ -432,96 +436,137 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>数学之美——傅立叶变换的本质</h1>
-<h2 id="引言">引言</h2>
-<p>本文从物理学角度切入浅析了傅立叶变换的本质，用通俗的语言来阐释什么是傅立叶变换，并简单说明了一些傅立叶变换的现实应用原理。相信阅读本文后，读者能对傅立叶变换的重要性有更为深刻直观的认识。</p>
+                <h1>计算机系统设计的几个核心思想和计算机系统的总体架构</h1>
+<h2 id="一、计算机系统设计的核心思想">一、计算机系统设计的核心思想</h2>
+<h3 id="1、面向摩尔定律的设计">1、面向摩尔定律的设计</h3>
+<p>平衡 <strong>时间</strong>矛盾，设计计算机体系时预设设计完成时的CPU性能来构建系统。</p>
+<h3 id="2、利用冗余来提升可靠性">2、利用冗余来提升可靠性</h3>
+<p>用多余的元件来使得系统更加可靠，就像足球队的替补队员。<br>
+计算机系统中较为常见的是RAID磁盘冗余阵列。</p>
+<h3 id="3、多级层次存储器体系">3、多级层次存储器体系</h3>
+<p>平衡 访存速度 和 空间大小 矛盾，构建一个整体，核心原因是CPU每次处理的数据有限，这使得多层次存储成为可能。</p>
+<h3 id="4、并行提升系统的吞吐量">4、并行提升系统的吞吐量</h3>
+<p>能力越大责任越大，这个人干一次一件事绰绰有余，让他一次多干点。</p>
+<h3 id="5、流水线提高系统的性能">5、流水线提高系统的性能</h3>
+<p>流水线 充分利用系统资源，指令执行的不同阶段（流水级），所使用的资源外的资源利用起来，进行其他指令其他流水级的操作。</p>
+<p>指令级并行的实现方法：<br>
+1、增加流水线深度，以提升指令并行的几率；<br>
+2、多发射，一个时钟周期可以触发多个指令，使得它们并行，（需要额外的硬件支持）。</p>
+<h3 id="6、加速大概率事件，提高资源利用率">6、加速大概率事件，提高资源利用率</h3>
+<p>把钱花在刀刃上。</p>
+<h3 id="7、抽象简化设计">7、抽象简化设计</h3>
+<p>层次之间可以互不影响，像是社会化的体系。各部门独自经营却能很好的相互协作。或者说，各个抽象结构之间，是相互服务与被服务的关系，抽象结构体不会去关心其他结构体的内部实现。这样，就可以在庞大而复杂的计算机体系设计中理清头绪，把精力集中，并提供可以工业化协作设计的基础。<br>
+例子：计算机软件硬件接口、面向对象语言的封装</p>
+<h3 id="8、预测提高性能">8、预测提高性能</h3>
+<p>把工作做在前面，职场好员工。</p>
+<h2 id="二、计算机的结构构成">二、计算机的结构构成</h2>
+<p>意义是对计算机系统有个系统的认识，在需要提升系统性能时能够科学的进行深入分析，而不是通过反复大量的实验进行尝试优化。<br>
+（吐槽一下，科班与非科班的区别～）</p>
+<h3 id="2-1-计算机结构的构成是什么样的">2.1 计算机结构的构成是什么样的</h3>
+<p>计算机系统的设计充分体现了抽象的思想，总体上，系统分为计算机硬件与计算机软件。</p>
+<h4 id="2-1-1-硬件">2.1.1 硬件</h4>
+<p>硬件关心的是如何通过物理实体构建计算机。从硬件角度看，计算机的大体功能是，对数据进行输入，存储数据，运算器处理数据，数据输出。其中控制器控制整个流程的进行。<br>
+计算机硬件也由不同的抽象部件组成，根据其功能分为：输入、输出设备，数据通路（运算器），控制器 和 存储器 五大部件。</p>
+<h4 id="2-1-2-软件">2.1.2 软件</h4>
+<h5 id="编程语言的层次">编程语言的层次</h5>
+<p>计算机所能理解的语言是机器语言，也就是二进制的代码，最初人们需要编码时就引入了助记符例如加法的二进制代码片段被表示为“add”，这就发展除了汇编语言。由于汇编要求人们用机器的思维去编码，很难快捷的编写出逻辑直接的代码，于是在汇编的基础上产生了高级语言。现有的高级语言分为两大类，解释型的和编译型的，解释型的语言在运行时直接通过解释器解释为计算机可识别的语言，而编译型语言程序需要由编译器先行编译为汇编语言程序，再由汇编器汇编为机器语言最终执行。</p>
+<h5 id="软件的类别">软件的类别</h5>
+<p>计算机上的软件存在不同的类别， 操作系统是管理和监控计算机硬件资源的软件，应用程序则是由应用程序员编写的具有具体功能的用户程序。以及上面提到到汇编程序（汇编器），编译程序（编译器），加载程序等。</p>
+<h4 id="2-1-3-软件与硬件的接口">2.1.3 软件与硬件的接口</h4>
+<p>计算机软件与硬件接口是软件指导硬件完成功能的接口。它最为关键的一个接口就是，指令集体系架构，ISA。它包含了机器语言程序正确执行的全部信息：指令、寄存器、存储访问、I/O等。</p>
+<p>ISA指令体系是计算机系统设计的关键，往往通过先设计计算机指令系统架构，而逐步完成整个计算机系统的设计。<br>
+因为，指令系统的设计是依照最终计算机系统所需的具体功能而设计的，根据功能首先设计出指令集，再根据指令集设计出指令集运行时所需要的硬件，如寄存器、存储器等。</p>
+<h3 id="2-2-现代计算机的设计改进">2.2 现代计算机的设计改进</h3>
+<p>计算机的发展受很多方面的影响，计算机的始祖最早使用的是电子管作为运算器元件，这种元器件造价高，可靠性底，体积大，我们平常所说的出Bug了，其实最早就是电子管发热吸引虫子钻进计算机，导致的短路。后来不断发展，我们有了晶体管取代了电子管，晶体管造价低，体积小性能好。且其发展规律被归纳为摩尔定律，这种指数级的发展使得计算机的运算能力极速提升，但现有的内部存储却跟不上这种变化，于是在这一阶段，人们对于计算机的设计改进重心放在如何提高内存的容量上。如今，计算机由单核发展到多核，人们的设计重心又转移到了如何提高并发，利用多核特性的问题。</p>
+<p>总之，计算机的发展离不开各个学科，各种技术的发展，并且随着计算机的不断发展，设计计算机的思路也在发生变化。而不变的就是通过各种手段，克服系统性瓶颈，不断提升综合性能。</p>
+<h4 id="2-2-1-单核到多核微处理器">2.2.1 单核到多核微处理器</h4>
+<h5 id="为什么要从单核到多核">为什么要从单核到多核</h5>
+<p>随着时间的推移，摩尔定律的准确性也出现了问题，计算机芯片的集成度的无法保持预期增速。但更为主要的是，<strong>集成度的提高降低了功效</strong>，即能量转化比例，现行的计算机芯片，空载情形下（10%运算器利用率），需要70%的峰值能耗。对于服务器集群来说，这加大了维护成本和增加了碳排放。于是人们开始向着降低能耗的（提升能效）的道路上走了。</p>
+<p><strong>效能限制了芯片制造进一步加强集成度</strong>，那么如何在能够提升处理器性能的前提下，保证或进一步提升能效呢？<br>
+这就产生了多核处理器，多核处理器主要是通过增加芯片数量来提高并行程度以提升微处理器的吞吐率。</p>
+<h5 id="单核到多核的改变有什么影响">单核到多核的改变有什么影响</h5>
+<p>多线程（并发）编程，以前单核的时候，程序只要放在那里由于计算机芯片集成度的提高，运行性能会自动提高，而如今不再着力于集成度提高，使得要跟上“时代的潮流”（提高对于运算能力的利用率）就必须和硬件同步更新程序，添加多核并发的设计。<br>
+简单的说，就是<strong>计算机程序的性能提升需要适配微处理器核芯数的发展，来提高性能</strong>。</p>
+<h5 id="并发编程的难点在哪里">并发编程的难点在哪里</h5>
+<p>首先，并发编程是面向性能的，这要求在常规编程（即保证程序正确性，可靠性，可扩展性，封装性等特点）的基础上，还需要增添并发特性。<br>
+另外，一个程序作为整体，将它分成不同的线程来完成一个在外部看来完整流畅的功能时，不同线程之间是需要进行<strong>同步</strong>和<strong>通信</strong>的，并且要各个线程需要进行<strong>调度</strong>管理，除此之外，还要考虑线程对运算资源（微处理器核）利用的<strong>均衡</strong>性，保证不浪费算力。</p>
+<h4 id="2-2-2-存储器的层次结构">2.2.2 存储器的层次结构</h4>
+<p>在晶体管到集成电路，集成电路规模不断迅速扩大的阶段，算力的提升对与存储器的容量和性能提出了更多的要求。而我们现有的存储器，容量（钱）和速度是一对矛盾。</p>
+<p>高速存储元件造价高，速度快，低速元件速度慢但造假低。对于个人计算机来说，平衡成本和性能是比较重要的。<br>
+于是就诞生了，如今广泛应用于PC和PMD（个人移动设备）的存储器体系。</p>
+<h5 id="存储器层次结构的主要思想">存储器层次结构的主要思想</h5>
+<p>它的主要思想就是，<strong>造价高但速度快的用来提升存储层次体系的性能（访存速度），而造价低而速度较慢的存储元件用来提升存储层次体系的容量。</strong></p>
+<p><strong>这主要是因为，微处理器在同一时间处理的数据量是较小的，可以通过速度快但容量小的存储器进行支持，而下一层速度较慢的存储器提供对上一层的支持，把之后要用的数据预先提供给上一层。这样即保证了存储器的速度又保证了容量。</strong></p>
+<h5 id="现代存储体系的主要器件及其位置">现代存储体系的主要器件及其位置</h5>
+<p>现在存储器大致分为：寄存器、cache（缓存）、主存储器（内存）、外部存储器（主要介质是磁盘或是SSD固态硬盘）。</p>
+<p>依次序速度降低、容量增大。其中 寄存器、和Cache作为微处理器的一部分，而主存储器负责沟通外部存储器和微处理器（之中的存储器）。cache在现代微处理器中还有更详细的层次。</p>
+<p>在以上层次中，只有外部存储器是不因断电而丢失数据的，而其他存储器对数据的存储都是断电易失的。这与它们的硬件构成有关。</p>
+<p>构成主存储器的元件和cache的元件（最基本的组成）都是晶体管，通过不同的组合形式，和电容器的配合，在访存性能上有一定差异。主存储器和cache都是晶体管为元件的集成电路，主存储器实际上是DRAM（动态随机访问存储器），而cache实际上是SRAM（静态随机访问存储器）。而寄存器也是基于晶体管的集成电路，但是构造比起二者都简单，只存储计算机系统字长级大小的数据直接服务于运算单元ALU。</p>
+<h2 id="三、计算机系统的性能">三、计算机系统的性能</h2>
+<p>服务器强调吞吐量和可靠性，个人终端强调高响应速度。那么到底什么影响了计算机的性能，以及如何衡量性能，又如何提高性能？</p>
+<h3 id="3-1-什么决定了程序性能">3.1 什么决定了程序性能</h3>
+<p>我们知道计算机系统是一个运用抽象思维构建的系统，它抽象出了硬件，软件以及沟通软硬件的接口。那么在分析系统性能的时候就可以通过这三个方面入手。</p>
+<h4 id="硬件方面">硬件方面</h4>
+<p>计算机系统的硬件组成有：输入、输出设备，运算器，存储器，控制器。</p>
+<p>这几个部件中，对于计算机系统来说，<strong>运算器和存储器</strong>影响了程序运行的<strong>速度</strong>，这些器件性能越好，配合越密切，计算机的运算性能就越强；而<strong>输入输出设备</strong>、决定了数据转移的速度，这对某些特定方向的程序是影响很大的，例如，图形密集型应用，可能需要高性能显卡的支持，网络实时性要求高的应用如大型网络游戏可能需要性能更好的网卡。</p>
+<h4 id="软件方面">软件方面</h4>
+<p>软件上说，一般涉及到程序的<strong>数据结构与算法设计</strong>，这<strong>决定了源码级别程序语句数量和I/O操作数量</strong>，因此这也是软件工程师们着力提高的一个方面。<br>
+而<strong>编程语言、编译器、解释器</strong>，决定了，每条源码对应的<strong>指令级语句数量</strong>。</p>
+<h4 id="指令集体系ISA">指令集体系ISA</h4>
+<p>ISA影响了每项功能所需要的指令是什么，有多少。后面会进一步研究这部分。</p>
+<h3 id="3-2-如何量化性能指标">3.2 如何量化性能指标</h3>
+<p>上面我们说到，计算机系统的各个方面都影响到了计算机系统的性能。并且，我们在评价计算机系统时往往关注两个方面，吞吐率和响应时间。而在测量比较的时候，执行相同程序所使用的时间（响应时间）就可以比较出性能的优劣。</p>
 <blockquote>
-<ul>
-<li>世界上的许多事物之间的相互作用都是基于波。</li>
-<li>人可以听到、看到事物本身就很不可思议。</li>
-<li>看见是因为我们的眼睛接受光波，听见是因为我们的耳朵能接受声波，而主要的是我们的大脑能够将这些波进行处理，得到其中的信息。那么我们的大脑究竟如何做到这一点的呢？</li>
-<li>美颜软件是怎么做到磨皮的？音频和图片压缩是怎么做到的？无线通信又是如何做到的？下面的视频中的字母是如何画出来的？</li>
-</ul>
+<p>吞吐率：单位时间内完成的任务数量；<br>
+响应时间：完成任务所需要耗费的时间，包括I/O数据转移时间、存储器访存时间（磁盘和内存）、操作系统开销和CPU执行时间。</p>
 </blockquote>
-<p><img src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH.GIF" alt="100个向量绘制图形" title="100个向量绘制图形"><br>
-其实这一切的最根本的原理都是——傅立叶变换。</p>
-<hr>
-<h2 id="何为傅立叶变换">何为傅立叶变换</h2>
-<h3 id="波的叠加">波的叠加</h3>
-<p>要理解傅立叶变换首先要知道，<strong>波是具有可叠加的特性的</strong>。我们高中物理中学到过的，我现在依然较为深刻的，<a href="https://baike.baidu.com/item/%E6%B3%A2%E7%9A%84%E5%B9%B2%E6%B6%89/257113?fr=aladdin" target="_blank" rel="noopener">波的干涉（百度百科）</a>，讲的就是同种介质中的波相互影响而最后呈现出一种新的波。波的叠加后，有的地方振幅增强，有的地方振幅减弱，有的不变。例子就是向平静的湖面扔两块石头，所形成的波浪。</p>
-<p>理解了波的可叠加性，我们就知道原来世界上很多事物都是以波的形式存在的，而其实他们就是由一个又一个“简单的”波而叠加形成的 (<a href="https://zh.wikipedia.org/zh/%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7" target="_blank" rel="noopener">量子力学：波粒二象性(维基百科)</a>)。<em>他最核心区别于经典力学的想法就是：微观粒子时而表现出波动性，时而表现出粒子性。而波动具有的波长和频率意味着在空间和时间上，波动具有延伸性</em>。</p>
-<h3 id="物理学上傅立叶变换的本质——波叠加的“逆向工程”">物理学上傅立叶变换的本质——波叠加的“逆向工程”</h3>
-<p><strong>傅立叶变换：一种线性积分变换，用于信号在<u>时域</u><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>（或空域）和<u>频域</u><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>之间的变换。</strong><br>
-简而言之，就是将自然界复杂的信号，拆分成为基本成分的过程。而为了达到此目的，使用了一种叫做“线性积分变换”的数学方法（后面在“傅立叶变换的数学原理”会介绍）。</p>
+<h4 id="那么响应时间具体是由什么构成的？">那么响应时间具体是由什么构成的？</h4>
+<p>I/O数据转移时间、存储器访存时间、运算器运算时间（CPU执行时间）和操作系统的开销。<br>
+其中CPU执行时间又称：CPU时间，它包括了 用户CPU执行时间和系统CPU执行开销。</p>
 <blockquote>
-<p><a href="http://www.jezzamon.com/fourier/zh-cn.html" target="_blank" rel="noopener" title="傅立叶变换交互式入门">点击了解傅立叶变换过程可视化展示</a></p>
+<p>用户CPU时间：应用程序本身运行所耗费的运算时间；<br>
+系统CPU时间：操作系统为了运行应用程序所耗费的运算时间。</p>
 </blockquote>
-<p><strong>时域波信号</strong>由傅立叶变换被分解出来的基本组成单元正弦波，包含了<strong>振幅</strong>、<strong>相位</strong>，以及它们本身具有的<strong>频率</strong>，既是说傅立叶变换后得到的正弦波们具有：<strong>频率</strong>、<strong>相位</strong>、<strong>振幅</strong>这三个信息。（因为我们更多遇到的是在时间维度而不是空间维度的信号，于是本文主要探讨时域信号&lt;其实是我对空间上的变化一无所知&gt;）</p>
-<p>反过来说，要叠加为一个“不规则”（即自然界中的信号）的波形，其实是在时间轴上不同频率正弦波在同一时间振幅叠加而得的，相位也起到了错位的作用。<br>
-有的人说 傅立叶变换所得的正弦波是三维的，也就是它们在振幅、相位，和频率这三个维度上。</p>
-<p>所说的信号从时域向频域转换，实质上就是把在时域的三个维度（时间、振幅、相位）转变到频域的三个维度（频率、振幅、相位）。各位可以自己画出三维坐标系体会一下。</p>
-<h3 id="离散or连续">离散or连续</h3>
-<div align=center>
-<img style="width:50%;height:45%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E6%88%AA%E5%B1%8F2020-06-22%20%E4%B8%8A%E5%8D%881.31.43.png "align=center />
-</div>
-对于连续的时域信号，分周期性和非周期性信号，它们所对应的频域信号分别是连续的和离散的。
-<p>有限个不同频率的弦波所做的叠加，构成的波，如果对它进行傅立叶变换，得到的频谱图，频率维度的取值就是离散的。这对应于傅立叶级数。</p>
-<p>而一般情况下，自然界中的信号都是可以有无限个弦波叠加而来的，我们无法把它们穷举出来。而且这些自然界信号都是非周期性的。对应于连续傅立叶变换。</p>
-<div align=center>
-<img src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E7%A6%BB%E6%95%A3%E5%92%8C%E8%BF%9E%E7%BB%AD.jpeg " alt="离散和连续频谱图" />
-<p> <i>请原谅我的字丑。。。</i></p>
-</div>
-<p>这也是为什么在连续傅立叶变换时使用的数学工具需要用到“积分变换”——针对连续问题。</p>
-<hr>
-<h2 id="傅立叶变换的数学原理">傅立叶变换的数学原理</h2>
-<h3 id="线性代数角度看傅立叶变换的本质——线性变换">线性代数角度看傅立叶变换的本质——线性变换</h3>
-<p>前面我们提到，傅立叶变换是将时域信号转换为频域信号，它们可以看成是三维空间。而傅立叶变换可以看成信号（向量）是从时域三维空间线性变换到频域三维空间。</p>
-<p>因此我们可以把傅立叶变换前的三维空间用一组<strong>正交基</strong>（1，sinwt，coswt）来描述。</p>
-<p>试想我们如果用变换前的波形（向量）来点乘一个与在sinwt与coswt面上的向量（这里我们一般用的是<u>sinwt+icoswt</u> <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> <strong>欧拉公式</strong>），那么与w不相关的部分都会被消掉（垂直向量的点积为0），于是我们就得到分解出来的弦波（分连续和离散两种情况，离散就是弦波相加&lt;傅立叶级数&gt;，连续可看作是无穷区间上的定积分）。</p>
-<h3 id="欧拉公式——复平面与三角函数的桥梁"><a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F" target="_blank" rel="noopener" title="欧拉公式">欧拉公式</a>——复平面与三角函数的桥梁</h3>
-<p><img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/oula.png "/><img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F.png "/></p>
-<p>由于欧拉公式的存在，那么我们很容易想到，把上面的复平面 sinwt+icoswt（正交向量线性组合，可以扩展向量空间维度），替换为<strong>e</strong>的-i𝛚t次方（加负号不影响代表该平面，在复平面上角速度方向变为顺时针）。<br>
-于是我们就得到了连续傅立叶变换的表达式：</p>
-<img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E8%BF%9E%E7%BB%AD%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2.png" align=center />
-<img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%A7%92%E9%80%9F%E5%BA%A6.png" align=center />
-<!--![连续傅立叶变换][连续傅立叶变换]-->
-<hr>
-<h2 id="傅立叶变换的应用">傅立叶变换的应用</h2>
-<h3 id="1-利用傅立叶变换原理来绘制图形（曲线拟合曲线）">1.利用傅立叶变换原理来绘制图形（曲线拟合曲线）</h3>
-<div align=center>
-<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_30v.GIF" />
-<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_50v.GIF"  />
-<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH.GIF"/>
-<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_1000v.GIF"/>
-</div>
-动图依次是由30个、50个，100个，1000个傅立叶变换所得弦波拟合我所自定义图形的过程。
-<p>其中的圆表示的是各个频率正弦波，半径为振幅，向量箭头初始位置由相位决定，圆转一周的速度由频率决定，所有的向量叠加决定了该时间点最后指向的位置。</p>
+<h4 id="用户CPU时间">用户CPU时间</h4>
+<p>我们详细探讨一下用户CPU时间，因为这在计算机组成中占有举足轻重的地位（CPU的设计的主要衡量指标）。</p>
+<p>操作系统开销包含了应用程序经由高级语言最终到机器语言指令所有转化过程的时间。<br>
+用户CPU时间，从本质上讲就是，经过转化的机器语言指令在CPU执行所花费的时间。因此，我们可以轻松的得到 <strong>指令数目会影响用户CPU时间</strong>的结论。<br>
+由此我们可以得到</p>
 <blockquote>
-<p>动图由 <strong>manim</strong>生成，它是一个基于Python的可视化项目，由3Blue1Brown提供。<br>
-<a href="https://github.com/3b1b/manim" target="_blank" rel="noopener">manim_Github</a></p>
+<p><strong>用户CPU时间 = 指令数量 X 平均指令执行时间</strong>。</p>
 </blockquote>
-<p><strong>从曲线拟合的角度来看，相较于泰勒用直线拟合曲线的做法，傅立叶是用曲线来拟合曲线。</strong></p>
-<h3 id="2-人脑就是一个高级傅立叶运算器">2.人脑就是一个高级傅立叶运算器</h3>
-<p>人的大脑就像是一台能够进行傅立叶变换的机器，它能分清楚不同波段的声音，不同波段的光线。这也是名侦探柯南剧场版颤栗的乐谱中“绝对音感”的依据。</p>
-<h3 id="3-照片磨皮、音频压缩等原理">3.照片磨皮、音频压缩等原理</h3>
-<p>而美颜和图片、音频压缩是因为，低频决定框架，高频确定细节（就像我动图展示的那样，叠加越多高频正弦波，越接近“完美”），我们可以利用这一点，适当减少高频，来使得原来的媒体在总体不变的情况下，降低大小或是减少细节。</p>
-<h2 id="结语">结语</h2>
-<p>总之，(连续)傅立叶变换是一种线性积分变换，用于信号在时域（或空域）到频域之间的变换。它的数学原理就是线性变换，然后如果频率是连续的（时域连续非周期），那么就需要进行积分。而傅立叶级数是把类似的波表示成为简单弦波的组合，对应的是时域连续周期性信号。利用这些原理我们可以解析信号，压缩拟合等；反过来我们可以用符合特征的弦波叠加为所需的信号。</p>
-<p>由于能力时间有限，不足或错漏之处还请海涵，并恳请不吝赐教。</p>
-<p><a href="https://charlesliuyx.github.io/2018/02/18/%E3%80%90%E7%9B%B4%E8%A7%82%E8%AF%A6%E8%A7%A3%E3%80%91%E8%AE%A9%E4%BD%A0%E6%B0%B8%E8%BF%9C%E5%BF%98%E4%B8%8D%E4%BA%86%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%9E%90/" target="_blank" rel="noopener">友链，作为补充</a></p>
-<h2 id="注解">注解</h2>
-<!--[连续傅立叶变换]: http://i1.fuimg.com/721720/e1437990f22475f0.png "连续傅立叶变换表达式"-->
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>描述数学函数或物理信号对时间的关系。例如一个信号的时域波形可以表达信号随着时间的变化。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>指在对函数或信号进行分析时，分析其和频率有关部份，而不是和时间有关的部份，和时域一词相对。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn3" class="footnote-item"><p>复数实际上是一种用一个数就能标识二维坐标的标记，通过这种写法我们可以表示一个平面。此处这个平面是振幅和相位的二维平面。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
+<p>我们知道，CPU被比做计算机的心脏，而实际上，就是在说它与心脏类似的<strong>时钟频率</strong>，时钟频率就是计算机的心率，而它的倒数 <strong>时钟周期</strong>就是计算机的“心脏”每跳动一次的时间间隔。由此，我们可以进一步的把“平均指令执行时间”拆解：</p>
+<blockquote>
+<p><strong>平均指令执行时间 = 时钟周期 X 平均指令时钟周期CPI</strong><br>
+由此，我们就把用户CPU时间，拆解到了最为基本的指标。<br>
+<strong>用户CPU时间 = 指令数量 X 时钟周期 X CPI</strong>。<br>
+这其实就是<strong>CPU性能的经典公式</strong>。</p>
+</blockquote>
+<h3 id="3-3-性能的测评">3.3 性能的测评</h3>
+<p>事实上，现在对于性能的测评主要是基于测评程序。这部分没有深入了解，留待以后探索。</p>
+<h3 id="3-4-如何提高性能">3.4 如何提高性能</h3>
+<p>要提升性能首先要定义性能方向，然后测量，找寻瓶颈，加以改进。<br>
+提高性能的本质就是运用上面的各种思想，对各个抽象的部分进行优化。这将在后面逐一讲到。<br>
+影响性能的因素，以及它们具体影响的指标：<br>
+<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E6%80%A7%E8%83%BD%E5%BD%B1%E5%93%8D%E6%8C%87%E6%A0%87.png" alt="什么影响性能" title="影响性能的指标"></p>
+<h3 id="3-5-关于性能的两个容易误解的点">3.5 关于性能的两个容易误解的点</h3>
+<h4 id="1、只有执行时间是绝对性指标，其他指标（CPI、时钟周期、指令数目）的改变不一定会得到预期方向或强度的性能改变。">1、只有执行时间是绝对性指标，其他指标（CPI、时钟周期、指令数目）的改变不一定会得到预期方向或强度的性能改变。</h4>
+<p>永远记住,唯一能够被完全可靠测量的计算机性能指标是时间。例如,对指令集减少指令数目的改进可能降低时钟周期时间或提高CPI,从而抵消了改进的效果。类似地, CPI与执行的指令类型相关,执行指令数最少的代码其执行速度未必是最快的。</p>
+<h4 id="2、效用递减，改进量与性能变化不是线性关系。量化表示：Amdahl定律，">2、效用递减，改进量与性能变化不是线性关系。量化表示：Amdahl定律，</h4>
+<p>Amdahl定律:阐述了“对于特定改进的性能提升可能由所使用的改进特征的数量所限制”的规则。它是“收益递减定律”的量化版本。<br>
+就是说在利用加速大概率事件的设计思想的时候，注意对整体事件的性能改进受限于大概率事件在整体中的数量限制，即使对大概率事件的改进是线性的，但对于整体而言不是。</p>
+<h3 id="3-6-性能计算的经典例题">3.6 性能计算的经典例题</h3>
+<p>1、某程序在一台时钟频率为2GHz的计算机A上运行需要10秒。现在将设计一台计算机B，希望将运行时间缩短为6秒。计算机的设计者采用的方法是提高时钟频率，但这会影响CPU其余部分的设计，使计算机B运行该程序时需要相当于计算机A的1.2倍的时钟周期数。那么计算机设计者应该将时钟频率提高到多少？</p>
+<p>2、假设我们有相同指令集的两种不同实现方式。计算机A的时钟周期为250ps，对某程序的CPI为2.0；计算机B的时钟周期为500ps，对同样程序的CPI为1.2。对于该程序，请问哪台计算机执行的速度更快？快多少？</p>
+<p>3、一个编译器设计者试图在两个代码序列之间进行选择。硬件设计者给出了如下数据：<br>
+<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E5%AD%903%E8%A1%A8%E6%A0%BC2.png" alt="" title="每类指令CPI"><br>
+对于某高级语句的实现，两个序列所需的各类指令数量如下：<br>
+<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E5%AD%903%E8%A1%A8%E6%A0%BC1.png" alt="" title="每类指令所需数量"><br>
+问：哪个序列所需的指令数多？哪个执行速度更快？每个代码序列的CPI是多少？</p>
+<h3 id="参考答案">参考答案</h3>
+<p>1、<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E9%A2%981%E7%9A%84%E7%AD%94%E6%A1%88.png" alt=""><br>
+2、<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E9%A2%982%E7%AD%94%E6%A1%88.png" alt=""><br>
+3、<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E5%AD%903%E7%AD%94%E6%A1%88.png" alt=""></p>
 
             </div>
             <hr/>
@@ -547,7 +592,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.idongxu.com.cn/2020/06/21/shu-xue-zhi-mei-fu-li-xie-bian-huan-de-ben-zhi/">http://blog.idongxu.com.cn/2020/06/21/shu-xue-zhi-mei-fu-li-xie-bian-huan-de-ben-zhi/</a>
+                    <a href="http://blog.idongxu.com.cn/2020/07/23/ji-suan-ji-ji-chu-she-ji-si-xiang-he-xi-tong-she-ji/">http://blog.idongxu.com.cn/2020/07/23/ji-suan-ji-ji-chu-she-ji-si-xiang-he-xi-tong-she-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -585,12 +630,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">
-                                    <span class="chip bg-color">微积分</span>
+                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/">
+                                    <span class="chip bg-color">设计思想</span>
                                 </a>
                             
-                                <a href="/tags/%E5%82%85%E7%AB%8B%E5%8F%B6/">
-                                    <span class="chip bg-color">傅立叶</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
+                                    <span class="chip bg-color">计算机组成</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%80%A7%E8%83%BD/">
+                                    <span class="chip bg-color">性能</span>
                                 </a>
                             
                         </div>
@@ -1021,9 +1070,73 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/07/23/ji-suan-ji-ji-chu-she-ji-si-xiang-he-xi-tong-she-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="计算机基础——计算机设计思想以及系统设计">
+                        
+                        <span class="card-title">计算机基础——计算机设计思想以及系统设计</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            计算机系统设计的几个核心思想和计算机系统的总体架构
+一、计算机系统设计的核心思想
+1、面向摩尔定律的设计
+平衡 时间矛盾，设计计算机体系时预设设计完成时的CPU性能来构建系统。
+2、利用冗余来提升可靠性
+用多余的元件来使得系统更加可靠，就像
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    计算机基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/">
+                        <span class="chip bg-color">设计思想</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
+                        <span class="chip bg-color">计算机组成</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%80%A7%E8%83%BD/">
+                        <span class="chip bg-color">性能</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/07/15/shu-ju-jie-gou-yu-suan-fa-cha-zhao/">
                     <div class="card-image">
@@ -1044,9 +1157,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1072,65 +1185,6 @@
                     
                     <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
                         <span class="chip bg-color">二叉搜索树</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/06/21/shu-xue-zhi-mei-fu-li-xie-bian-huan-de-ben-zhi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="数学之美——傅立叶变换的本质">
-                        
-                        <span class="card-title">数学之美——傅立叶变换的本质</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            数学之美——傅立叶变换的本质
-引言
-本文从物理学角度切入浅析了傅立叶变换的本质，用通俗的语言来阐释什么是傅立叶变换，并简单说明了一些傅立叶变换的现实应用原理。相信阅读本文后，读者能对傅立叶变换的重要性有更为深刻直观的认识。
-
-
-世界上的许多
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
-                                    数学
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">
-                        <span class="chip bg-color">微积分</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%82%85%E7%AB%8B%E5%8F%B6/">
-                        <span class="chip bg-color">傅立叶</span>
                     </a>
                     
                 </div>
