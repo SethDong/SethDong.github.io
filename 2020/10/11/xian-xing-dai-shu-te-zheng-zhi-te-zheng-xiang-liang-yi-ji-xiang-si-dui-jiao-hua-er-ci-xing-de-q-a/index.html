@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机基础——计算机设计思想以及系统设计, Seth&#39;s Blogs">
+    <meta name="keywords" content="线性代数——特征值、特征向量以及相似对角化、二次型的Q&amp;A, Seth&#39;s Blogs">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机基础——计算机设计思想以及系统设计 | Seth&#39;s Blogs</title>
+    <title>线性代数——特征值、特征向量以及相似对角化、二次型的Q&amp;A | Seth&#39;s Blogs</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机基础——计算机设计思想以及系统设计</h1>
+                    <h1 class="description center-align post-title">线性代数——特征值、特征向量以及相似对角化、二次型的Q&amp;A</h1>
                 </div>
             </div>
         </div>
@@ -367,16 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/">
-                                <span class="chip bg-color">设计思想</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
-                                <span class="chip bg-color">计算机组成</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%80%A7%E8%83%BD/">
-                                <span class="chip bg-color">性能</span>
+                            <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
+                                <span class="chip bg-color">线性代数</span>
                             </a>
                         
                     </div>
@@ -387,8 +379,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="post-category">
-                                计算机基础
+                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
+                                数学
                             </a>
                         
                     </div>
@@ -400,28 +392,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-23
+                    2020-10-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-23
+                    2020-10-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.7k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    4 分
                 </div>
                 
 
@@ -436,137 +428,40 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>计算机系统设计的几个核心思想和计算机系统的总体架构</h1>
-<h2 id="一、计算机系统设计的核心思想">一、计算机系统设计的核心思想</h2>
-<h3 id="1、面向摩尔定律的设计">1、面向摩尔定律的设计</h3>
-<p>平衡 <strong>时间</strong>矛盾，设计计算机体系时预设设计完成时的CPU性能来构建系统。</p>
-<h3 id="2、利用冗余来提升可靠性">2、利用冗余来提升可靠性</h3>
-<p>用多余的元件来使得系统更加可靠，就像足球队的替补队员。<br>
-计算机系统中较为常见的是RAID磁盘冗余阵列。</p>
-<h3 id="3、多级层次存储器体系">3、多级层次存储器体系</h3>
-<p>平衡 访存速度 和 空间大小 矛盾，构建一个整体，核心原因是CPU每次处理的数据有限，这使得多层次存储成为可能。</p>
-<h3 id="4、并行提升系统的吞吐量">4、并行提升系统的吞吐量</h3>
-<p>能力越大责任越大，这个人干一次一件事绰绰有余，让他一次多干点。</p>
-<h3 id="5、流水线提高系统的性能">5、流水线提高系统的性能</h3>
-<p>流水线 充分利用系统资源，指令执行的不同阶段（流水级），所使用的资源外的资源利用起来，进行其他指令其他流水级的操作。</p>
-<p>指令级并行的实现方法：<br>
-1、增加流水线深度，以提升指令并行的几率；<br>
-2、多发射，一个时钟周期可以触发多个指令，使得它们并行，（需要额外的硬件支持）。</p>
-<h3 id="6、加速大概率事件，提高资源利用率">6、加速大概率事件，提高资源利用率</h3>
-<p>把钱花在刀刃上。</p>
-<h3 id="7、抽象简化设计">7、抽象简化设计</h3>
-<p>层次之间可以互不影响，像是社会化的体系。各部门独自经营却能很好的相互协作。或者说，各个抽象结构之间，是相互服务与被服务的关系，抽象结构体不会去关心其他结构体的内部实现。这样，就可以在庞大而复杂的计算机体系设计中理清头绪，把精力集中，并提供可以工业化协作设计的基础。<br>
-例子：计算机软件硬件接口、面向对象语言的封装</p>
-<h3 id="8、预测提高性能">8、预测提高性能</h3>
-<p>把工作做在前面，职场好员工。</p>
-<h2 id="二、计算机的结构构成">二、计算机的结构构成</h2>
-<p>意义是对计算机系统有个系统的认识，在需要提升系统性能时能够科学的进行深入分析，而不是通过反复大量的实验进行尝试优化。<br>
-（吐槽一下，科班与非科班的区别～）</p>
-<h3 id="2-1-计算机结构的构成是什么样的">2.1 计算机结构的构成是什么样的</h3>
-<p>计算机系统的设计充分体现了抽象的思想，总体上，系统分为计算机硬件与计算机软件。</p>
-<h4 id="2-1-1-硬件">2.1.1 硬件</h4>
-<p>硬件关心的是如何通过物理实体构建计算机。从硬件角度看，计算机的大体功能是，对数据进行输入，存储数据，运算器处理数据，数据输出。其中控制器控制整个流程的进行。<br>
-计算机硬件也由不同的抽象部件组成，根据其功能分为：输入、输出设备，数据通路（运算器），控制器 和 存储器 五大部件。</p>
-<h4 id="2-1-2-软件">2.1.2 软件</h4>
-<h5 id="编程语言的层次">编程语言的层次</h5>
-<p>计算机所能理解的语言是机器语言，也就是二进制的代码，最初人们需要编码时就引入了助记符例如加法的二进制代码片段被表示为“add”，这就发展除了汇编语言。由于汇编要求人们用机器的思维去编码，很难快捷的编写出逻辑直接的代码，于是在汇编的基础上产生了高级语言。现有的高级语言分为两大类，解释型的和编译型的，解释型的语言在运行时直接通过解释器解释为计算机可识别的语言，而编译型语言程序需要由编译器先行编译为汇编语言程序，再由汇编器汇编为机器语言最终执行。</p>
-<h5 id="软件的类别">软件的类别</h5>
-<p>计算机上的软件存在不同的类别， 操作系统是管理和监控计算机硬件资源的软件，应用程序则是由应用程序员编写的具有具体功能的用户程序。以及上面提到到汇编程序（汇编器），编译程序（编译器），加载程序等。</p>
-<h4 id="2-1-3-软件与硬件的接口">2.1.3 软件与硬件的接口</h4>
-<p>计算机软件与硬件接口是软件指导硬件完成功能的接口。它最为关键的一个接口就是，指令集体系架构，ISA。它包含了机器语言程序正确执行的全部信息：指令、寄存器、存储访问、I/O等。</p>
-<p>ISA指令体系是计算机系统设计的关键，往往通过先设计计算机指令系统架构，而逐步完成整个计算机系统的设计。<br>
-因为，指令系统的设计是依照最终计算机系统所需的具体功能而设计的，根据功能首先设计出指令集，再根据指令集设计出指令集运行时所需要的硬件，如寄存器、存储器等。</p>
-<h3 id="2-2-现代计算机的设计改进">2.2 现代计算机的设计改进</h3>
-<p>计算机的发展受很多方面的影响，计算机的始祖最早使用的是电子管作为运算器元件，这种元器件造价高，可靠性底，体积大，我们平常所说的出Bug了，其实最早就是电子管发热吸引虫子钻进计算机，导致的短路。后来不断发展，我们有了晶体管取代了电子管，晶体管造价低，体积小性能好。且其发展规律被归纳为摩尔定律，这种指数级的发展使得计算机的运算能力极速提升，但现有的内部存储却跟不上这种变化，于是在这一阶段，人们对于计算机的设计改进重心放在如何提高内存的容量上。如今，计算机由单核发展到多核，人们的设计重心又转移到了如何提高并发，利用多核特性的问题。</p>
-<p>总之，计算机的发展离不开各个学科，各种技术的发展，并且随着计算机的不断发展，设计计算机的思路也在发生变化。而不变的就是通过各种手段，克服系统性瓶颈，不断提升综合性能。</p>
-<h4 id="2-2-1-单核到多核微处理器">2.2.1 单核到多核微处理器</h4>
-<h5 id="为什么要从单核到多核">为什么要从单核到多核</h5>
-<p>随着时间的推移，摩尔定律的准确性也出现了问题，计算机芯片的集成度的无法保持预期增速。但更为主要的是，<strong>集成度的提高降低了功效</strong>，即能量转化比例，现行的计算机芯片，空载情形下（10%运算器利用率），需要70%的峰值能耗。对于服务器集群来说，这加大了维护成本和增加了碳排放。于是人们开始向着降低能耗的（提升能效）的道路上走了。</p>
-<p><strong>效能限制了芯片制造进一步加强集成度</strong>，那么如何在能够提升处理器性能的前提下，保证或进一步提升能效呢？<br>
-这就产生了多核处理器，多核处理器主要是通过增加芯片数量来提高并行程度以提升微处理器的吞吐率。</p>
-<h5 id="单核到多核的改变有什么影响">单核到多核的改变有什么影响</h5>
-<p>多线程（并发）编程，以前单核的时候，程序只要放在那里由于计算机芯片集成度的提高，运行性能会自动提高，而如今不再着力于集成度提高，使得要跟上“时代的潮流”（提高对于运算能力的利用率）就必须和硬件同步更新程序，添加多核并发的设计。<br>
-简单的说，就是<strong>计算机程序的性能提升需要适配微处理器核芯数的发展，来提高性能</strong>。</p>
-<h5 id="并发编程的难点在哪里">并发编程的难点在哪里</h5>
-<p>首先，并发编程是面向性能的，这要求在常规编程（即保证程序正确性，可靠性，可扩展性，封装性等特点）的基础上，还需要增添并发特性。<br>
-另外，一个程序作为整体，将它分成不同的线程来完成一个在外部看来完整流畅的功能时，不同线程之间是需要进行<strong>同步</strong>和<strong>通信</strong>的，并且要各个线程需要进行<strong>调度</strong>管理，除此之外，还要考虑线程对运算资源（微处理器核）利用的<strong>均衡</strong>性，保证不浪费算力。</p>
-<h4 id="2-2-2-存储器的层次结构">2.2.2 存储器的层次结构</h4>
-<p>在晶体管到集成电路，集成电路规模不断迅速扩大的阶段，算力的提升对与存储器的容量和性能提出了更多的要求。而我们现有的存储器，容量（钱）和速度是一对矛盾。</p>
-<p>高速存储元件造价高，速度快，低速元件速度慢但造假低。对于个人计算机来说，平衡成本和性能是比较重要的。<br>
-于是就诞生了，如今广泛应用于PC和PMD（个人移动设备）的存储器体系。</p>
-<h5 id="存储器层次结构的主要思想">存储器层次结构的主要思想</h5>
-<p>它的主要思想就是，<strong>造价高但速度快的用来提升存储层次体系的性能（访存速度），而造价低而速度较慢的存储元件用来提升存储层次体系的容量。</strong></p>
-<p><strong>这主要是因为，微处理器在同一时间处理的数据量是较小的，可以通过速度快但容量小的存储器进行支持，而下一层速度较慢的存储器提供对上一层的支持，把之后要用的数据预先提供给上一层。这样即保证了存储器的速度又保证了容量。</strong></p>
-<h5 id="现代存储体系的主要器件及其位置">现代存储体系的主要器件及其位置</h5>
-<p>现在存储器大致分为：寄存器、cache（缓存）、主存储器（内存）、外部存储器（主要介质是磁盘或是SSD固态硬盘）。</p>
-<p>依次序速度降低、容量增大。其中 寄存器、和Cache作为微处理器的一部分，而主存储器负责沟通外部存储器和微处理器（之中的存储器）。cache在现代微处理器中还有更详细的层次。</p>
-<p>在以上层次中，只有外部存储器是不因断电而丢失数据的，而其他存储器对数据的存储都是断电易失的。这与它们的硬件构成有关。</p>
-<p>构成主存储器的元件和cache的元件（最基本的组成）都是晶体管，通过不同的组合形式，和电容器的配合，在访存性能上有一定差异。主存储器和cache都是晶体管为元件的集成电路，主存储器实际上是DRAM（动态随机访问存储器），而cache实际上是SRAM（静态随机访问存储器）。而寄存器也是基于晶体管的集成电路，但是构造比起二者都简单，只存储计算机系统字长级大小的数据直接服务于运算单元ALU。</p>
-<h2 id="三、计算机系统的性能">三、计算机系统的性能</h2>
-<p>服务器强调吞吐量和可靠性，个人终端强调高响应速度。那么到底什么影响了计算机的性能，以及如何衡量性能，又如何提高性能？</p>
-<h3 id="3-1-什么决定了程序性能">3.1 什么决定了程序性能</h3>
-<p>我们知道计算机系统是一个运用抽象思维构建的系统，它抽象出了硬件，软件以及沟通软硬件的接口。那么在分析系统性能的时候就可以通过这三个方面入手。</p>
-<h4 id="硬件方面">硬件方面</h4>
-<p>计算机系统的硬件组成有：输入、输出设备，运算器，存储器，控制器。</p>
-<p>这几个部件中，对于计算机系统来说，<strong>运算器和存储器</strong>影响了程序运行的<strong>速度</strong>，这些器件性能越好，配合越密切，计算机的运算性能就越强；而<strong>输入输出设备</strong>、决定了数据转移的速度，这对某些特定方向的程序是影响很大的，例如，图形密集型应用，可能需要高性能显卡的支持，网络实时性要求高的应用如大型网络游戏可能需要性能更好的网卡。</p>
-<h4 id="软件方面">软件方面</h4>
-<p>软件上说，一般涉及到程序的<strong>数据结构与算法设计</strong>，这<strong>决定了源码级别程序语句数量和I/O操作数量</strong>，因此这也是软件工程师们着力提高的一个方面。<br>
-而<strong>编程语言、编译器、解释器</strong>，决定了，每条源码对应的<strong>指令级语句数量</strong>。</p>
-<h4 id="指令集体系ISA">指令集体系ISA</h4>
-<p>ISA影响了每项功能所需要的指令是什么，有多少。后面会进一步研究这部分。</p>
-<h3 id="3-2-如何量化性能指标">3.2 如何量化性能指标</h3>
-<p>上面我们说到，计算机系统的各个方面都影响到了计算机系统的性能。并且，我们在评价计算机系统时往往关注两个方面，吞吐率和响应时间。而在测量比较的时候，执行相同程序所使用的时间（响应时间）就可以比较出性能的优劣。</p>
-<blockquote>
-<p>吞吐率：单位时间内完成的任务数量；<br>
-响应时间：完成任务所需要耗费的时间，包括I/O数据转移时间、存储器访存时间（磁盘和内存）、操作系统开销和CPU执行时间。</p>
-</blockquote>
-<h4 id="那么响应时间具体是由什么构成的？">那么响应时间具体是由什么构成的？</h4>
-<p>I/O数据转移时间、存储器访存时间、运算器运算时间（CPU执行时间）和操作系统的开销。<br>
-其中CPU执行时间又称：CPU时间，它包括了 用户CPU执行时间和系统CPU执行开销。</p>
-<blockquote>
-<p>用户CPU时间：应用程序本身运行所耗费的运算时间；<br>
-系统CPU时间：操作系统为了运行应用程序所耗费的运算时间。</p>
-</blockquote>
-<h4 id="用户CPU时间">用户CPU时间</h4>
-<p>我们详细探讨一下用户CPU时间，因为这在计算机组成中占有举足轻重的地位（CPU的设计的主要衡量指标）。</p>
-<p>操作系统开销包含了应用程序经由高级语言最终到机器语言指令所有转化过程的时间。<br>
-用户CPU时间，从本质上讲就是，经过转化的机器语言指令在CPU执行所花费的时间。因此，我们可以轻松的得到 <strong>指令数目会影响用户CPU时间</strong>的结论。<br>
-由此我们可以得到</p>
-<blockquote>
-<p><strong>用户CPU时间 = 指令数量 X 平均指令执行时间</strong>。</p>
-</blockquote>
-<p>我们知道，CPU被比做计算机的心脏，而实际上，就是在说它与心脏类似的<strong>时钟频率</strong>，时钟频率就是计算机的心率，而它的倒数 <strong>时钟周期</strong>就是计算机的“心脏”每跳动一次的时间间隔。由此，我们可以进一步的把“平均指令执行时间”拆解：</p>
-<blockquote>
-<p><strong>平均指令执行时间 = 时钟周期 X 平均指令时钟周期CPI</strong><br>
-由此，我们就把用户CPU时间，拆解到了最为基本的指标。<br>
-<strong>用户CPU时间 = 指令数量 X 时钟周期 X CPI</strong>。<br>
-这其实就是<strong>CPU性能的经典公式</strong>。</p>
-</blockquote>
-<h3 id="3-3-性能的测评">3.3 性能的测评</h3>
-<p>事实上，现在对于性能的测评主要是基于测评程序。这部分没有深入了解，留待以后探索。</p>
-<h3 id="3-4-如何提高性能">3.4 如何提高性能</h3>
-<p>要提升性能首先要定义性能方向，然后测量，找寻瓶颈，加以改进。<br>
-提高性能的本质就是运用上面的各种思想，对各个抽象的部分进行优化。这将在后面逐一讲到。<br>
-影响性能的因素，以及它们具体影响的指标：<br>
-<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E6%80%A7%E8%83%BD%E5%BD%B1%E5%93%8D%E6%8C%87%E6%A0%87.png" alt="什么影响性能" title="影响性能的指标"></p>
-<h3 id="3-5-关于性能的两个容易误解的点">3.5 关于性能的两个容易误解的点</h3>
-<h4 id="1、只有执行时间是绝对性指标，其他指标（CPI、时钟周期、指令数目）的改变不一定会得到预期方向或强度的性能改变。">1、只有执行时间是绝对性指标，其他指标（CPI、时钟周期、指令数目）的改变不一定会得到预期方向或强度的性能改变。</h4>
-<p>永远记住,唯一能够被完全可靠测量的计算机性能指标是时间。例如,对指令集减少指令数目的改进可能降低时钟周期时间或提高CPI,从而抵消了改进的效果。类似地, CPI与执行的指令类型相关,执行指令数最少的代码其执行速度未必是最快的。</p>
-<h4 id="2、效用递减，改进量与性能变化不是线性关系。量化表示：Amdahl定律，">2、效用递减，改进量与性能变化不是线性关系。量化表示：Amdahl定律，</h4>
-<p>Amdahl定律:阐述了“对于特定改进的性能提升可能由所使用的改进特征的数量所限制”的规则。它是“收益递减定律”的量化版本。<br>
-就是说在利用加速大概率事件的设计思想的时候，注意对整体事件的性能改进受限于大概率事件在整体中的数量限制，即使对大概率事件的改进是线性的，但对于整体而言不是。</p>
-<h3 id="3-6-性能计算的经典例题">3.6 性能计算的经典例题</h3>
-<p>1、某程序在一台时钟频率为2GHz的计算机A上运行需要10秒。现在将设计一台计算机B，希望将运行时间缩短为6秒。计算机的设计者采用的方法是提高时钟频率，但这会影响CPU其余部分的设计，使计算机B运行该程序时需要相当于计算机A的1.2倍的时钟周期数。那么计算机设计者应该将时钟频率提高到多少？</p>
-<p>2、假设我们有相同指令集的两种不同实现方式。计算机A的时钟周期为250ps，对某程序的CPI为2.0；计算机B的时钟周期为500ps，对同样程序的CPI为1.2。对于该程序，请问哪台计算机执行的速度更快？快多少？</p>
-<p>3、一个编译器设计者试图在两个代码序列之间进行选择。硬件设计者给出了如下数据：<br>
-<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E5%AD%903%E8%A1%A8%E6%A0%BC2.png" alt="" title="每类指令CPI"><br>
-对于某高级语句的实现，两个序列所需的各类指令数量如下：<br>
-<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E5%AD%903%E8%A1%A8%E6%A0%BC1.png" alt="" title="每类指令所需数量"><br>
-问：哪个序列所需的指令数多？哪个执行速度更快？每个代码序列的CPI是多少？</p>
-<h3 id="参考答案">参考答案</h3>
-<p>1、<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E9%A2%981%E7%9A%84%E7%AD%94%E6%A1%88.png" alt=""><br>
-2、<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E9%A2%982%E7%AD%94%E6%A1%88.png" alt=""><br>
-3、<img src="http://driver.idongxu.com.cn/ImgHost/2020-07-23/%E4%BE%8B%E5%AD%903%E7%AD%94%E6%A1%88.png" alt=""></p>
+                <h1>特征值、特征向量以及相似对角化、二次型的Q&amp;A</h1>
+<h2 id="1、特征值特征向量的本质">1、特征值特征向量的本质</h2>
+<p>对于一个矩阵来说，它本身可以表示，直角坐标系下以轴方向的标准正交基进行线性变换。这个变换在几何上可以呈现出 拉伸、压缩或者旋转。而我们的相似对角化的目的就是，把这种变换等价地转换为只进行拉伸或压缩。<br>
+而特征向量，是在该线性变换过程中，张成空间未发生变化的向量。特征值就是对应特征向量的拉伸（压缩）程度。简言之，在线性变换中，特征向量没有发生旋转，只是发生了长度的变化。</p>
+<p>因此，我们可以考虑，只要有足够线性无关的特征向量（足以描述整个变换），就可以把他们作为新的一组基，来描述该变换。而且最重要的是，这个变化只进行拉伸或者压缩，并不需要进行旋转。这在很大程度上可以简化一些计算（特别是矩阵的幂）。</p>
+<p>补充：进行基变换，所得矩阵与原矩阵等价。等价&lt;相似。</p>
+<h2 id="2、特征值、特征向量的求解">2、特征值、特征向量的求解</h2>
+<p>特征值可以利用定义，也可以利用行列式为0求解。特征向量可以利用定义，也可以通过求解齐次方程组来求基础解系。</p>
+<h2 id="3、是否所有的矩阵都可以相似对角化">3、是否所有的矩阵都可以相似对角化</h2>
+<p>只有存在n个线性无关特征向量的矩阵才可以进行相似对角化。正如前面所说的，需要找到足够多的特征向量来作为基描述线性变换，这个足够多就是n，也就是满秩。<br>
+特别的，在遇到k重特征值的时候，它需要对应有k个无关特征向量，才能确保可以相似对角化。</p>
+<h2 id="4、基变换（相似的本质），正交变换（合同的本质）">4、基变换（相似的本质），正交变换（合同的本质）</h2>
+<p>基变换是相似的本质，正交变换是合同的本质。相似实质就是在不同基下对同一线性变换（矩阵）的表示；而合同实际上是在不同基下同一双线性形的不同表示。</p>
+<p>正交变换是保持图形形状和大小不变的几何变换,包含旋转,平移,轴对称及上述变换的复合。正交可以保证向量的长度和两个向量之间的角度不变。</p>
+<p>将矩阵相似对角化，保持了原矩阵想要表达的线性变换。而对二次型进行标准化，实际上是对变量进行了线性代换，简化原函数的表示，去除了混合项。</p>
+<h2 id="5、二次型的标准化">5、二次型的标准化</h2>
+<p>二次型本质上是一种用矩阵表示多元二次多项式函数的工具。而通过把它化成标准型，就可以简化计算。</p>
+<h3 id="5-1-配方法">5.1 配方法</h3>
+<p>通过配凑的方式，把原函数改写为纯平方形式。</p>
+<h3 id="5-2正交变换法">5.2正交变换法</h3>
+<h4 id="5-2-1-理论依据">5.2.1 理论依据</h4>
+<p>二次型所对应的二次型矩阵都是对称阵，由于对称阵的独特性质，1、一定可以相似对角化，2、所得的对角阵与原矩阵合同。于是可以通过相似对角化的方式，来达到求合同对角阵的目的。（但是要注意需要满足过渡矩阵需要对称）</p>
+<p>note：相似有很多组，合同也有很多组，但是二次型矩阵进行对角化的方法，很巧就是得到的对角阵同原矩阵即相似又合同。</p>
+<h4 id="5-2-2-正交化的步骤">5.2.2 正交化的步骤</h4>
+<p>1、求出n个特征向量，并求出对应的基础解系；<br>
+2、n个特征向量需要满足两两正交的特点，若不满足，需要进行schnmit正交化。<br>
+3、由单位正交集构成过渡矩阵，和特征值对角阵。并且注意保证顺序与特征值的顺序一致。</p>
+<h4 id="5-2-3-需要进行单位化的原因">5.2.3 需要进行单位化的原因</h4>
+<p>一定要单位化，原因是在相似对角化，过渡矩阵P满足相似性后还需要满足合同的性质。即需要满足对称性，而单位化可以满足这一点。</p>
+<h2 id="6-合同与正定的判定方法">6 合同与正定的判定方法</h2>
+<p>正定是指，在未知数不全为0的情形下，函数值&gt;0。<br>
+可以通过正负惯性指数来判定矩阵是否合同、正定。</p>
+<p>合同满足：两矩阵正惯性指数相等and负惯性指数相等<br>
+正定满足：矩阵的正惯性指数为n</p>
 
             </div>
             <hr/>
@@ -592,7 +487,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.idongxu.com.cn/2020/07/23/ji-suan-ji-ji-chu-she-ji-si-xiang-he-xi-tong-she-ji/">http://blog.idongxu.com.cn/2020/07/23/ji-suan-ji-ji-chu-she-ji-si-xiang-he-xi-tong-she-ji/</a>
+                    <a href="http://blog.idongxu.com.cn/2020/10/11/xian-xing-dai-shu-te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/">http://blog.idongxu.com.cn/2020/10/11/xian-xing-dai-shu-te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,16 +525,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/">
-                                    <span class="chip bg-color">设计思想</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
-                                    <span class="chip bg-color">计算机组成</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%80%A7%E8%83%BD/">
-                                    <span class="chip bg-color">性能</span>
+                                <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
+                                    <span class="chip bg-color">线性代数</span>
                                 </a>
                             
                         </div>
@@ -1070,9 +957,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/10/11/xian-xing-dai-shu-te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/">
                     <div class="card-image">
@@ -1092,9 +980,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1107,6 +995,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1125,34 +1014,36 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/15/shu-ju-jie-gou-yu-suan-fa-cha-zhao/">
+                <a href="/2020/07/23/ji-suan-ji-ji-chu-she-ji-si-xiang-he-xi-tong-she-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/18.jpg" class="responsive-img" alt="数据结构与算法——查找">
+                        <img src="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/9.jpg" class="responsive-img" alt="计算机基础——计算机设计思想以及系统设计">
                         
-                        <span class="card-title">数据结构与算法——查找</span>
+                        <span class="card-title">计算机基础——计算机设计思想以及系统设计</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            查找
-引言
-
-查找是算法当中最为基本的一类算法。计算机运算的本质就是对于数据的操作，不论从宏观还是微观来看，计算机所做的事情都是，数据输入-数据处理-数据输出。但是由于计算机运算器的结构决定了，我们不能把所有数据都存储在运算器中，取而代之的
+                            计算机系统设计的几个核心思想和计算机系统的总体架构
+一、计算机系统设计的核心思想
+1、面向摩尔定律的设计
+平衡 时间矛盾，设计计算机体系时预设设计完成时的CPU性能来构建系统。
+2、利用冗余来提升可靠性
+用多余的元件来使得系统更加可靠，就像
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    计算机基础
                                 </a>
                             
                             
@@ -1162,16 +1053,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">二分查找</span>
+                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/">
+                        <span class="chip bg-color">设计思想</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%A3%E5%88%97%E8%A1%A8/">
-                        <span class="chip bg-color">散列表</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
+                        <span class="chip bg-color">计算机组成</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
-                        <span class="chip bg-color">二叉搜索树</span>
+                    <a href="/tags/%E6%80%A7%E8%83%BD/">
+                        <span class="chip bg-color">性能</span>
                     </a>
                     
                 </div>
