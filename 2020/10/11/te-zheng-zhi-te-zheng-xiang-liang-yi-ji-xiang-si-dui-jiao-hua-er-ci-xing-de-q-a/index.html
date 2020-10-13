@@ -399,14 +399,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-11
+                    2020-10-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.3k
                 </div>
                 
 
@@ -439,10 +439,13 @@
 <h2 id="3、是否所有的矩阵都可以相似对角化">3、是否所有的矩阵都可以相似对角化</h2>
 <p>只有存在n个线性无关特征向量的矩阵才可以进行相似对角化。正如前面所说的，需要找到足够多的特征向量来作为基描述线性变换，这个足够多就是n，也就是满秩。<br>
 特别的，在遇到k重特征值的时候，它需要对应有k个无关特征向量，才能确保可以相似对角化。</p>
-<h2 id="4、基变换（相似的本质），正交变换（合同的本质）">4、基变换（相似的本质），正交变换（合同的本质）</h2>
-<p>基变换是相似的本质，正交变换是合同的本质。相似实质就是在不同基下对同一线性变换（矩阵）的表示；而合同实际上是在不同基下同一双线性形的不同表示。</p>
-<p>正交变换是保持图形形状和大小不变的几何变换,包含旋转,平移,轴对称及上述变换的复合。正交可以保证向量的长度和两个向量之间的角度不变。</p>
-<p>将矩阵相似对角化，保持了原矩阵想要表达的线性变换。而对二次型进行标准化，实际上是对变量进行了线性代换，简化原函数的表示，去除了混合项。</p>
+<h2 id="4、基变换（相似的本质）VS-坐标变换（合同的本质）">4、基变换（相似的本质）VS. 坐标变换（合同的本质）</h2>
+<h3 id="4-1-目的不同">4.1 目的不同</h3>
+<p>相似是为了在不同标准下描述同一个矩阵（线性变换）。过渡矩阵体现的是两个基准之间的差异，如何变换可以切换（<strong>基变换</strong>）。</p>
+<p>而合同是为了，用不同的方式描述同一个二次型（多元二次函数）。过渡矩阵体现的是如何改变坐标（<strong>坐标变换</strong>）。直观上，二次型矩阵经过合同变换，得到了新的二次型矩阵。而实际上，被改变的是坐标或者说是函数的自变量。</p>
+<h3 id="4-2-二次型化为标准型的原理">4.2 二次型化为标准型的原理</h3>
+<p>合同的本质是坐标变换，而坐标变换的本质是对未知数进行可逆的线性变换。（有点类似于高数里面的参数方程&lt;线性的&gt;，换汤不换药）。而如果这个坐标变换恰好是正交变换（过渡矩阵是正交阵），那么这个变换过程也是相似变换，而且变换后所得的是一个对角阵。这就达到了化为标准型的目的。</p>
+<p>也就是说，一个二次型在坐标变换时，进行的是正交变换，那么它相当于进行了一次基变换（相似对角化），并且得到一个特征值构成的对角阵。</p>
 <h2 id="5、二次型的标准化">5、二次型的标准化</h2>
 <p>二次型本质上是一种用矩阵表示多元二次多项式函数的工具。而通过把它化成标准型，就可以简化计算。</p>
 <h3 id="5-1-配方法">5.1 配方法</h3>
@@ -487,7 +490,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.idongxu.com.cn/2020/10/11/xian-xing-dai-shu-te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/">http://blog.idongxu.com.cn/2020/10/11/xian-xing-dai-shu-te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/</a>
+                    <a href="http://blog.idongxu.com.cn/2020/10/11/te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/">http://blog.idongxu.com.cn/2020/10/11/te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -962,7 +965,7 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/10/11/xian-xing-dai-shu-te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/">
+                <a href="/2020/10/11/te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/">
                     <div class="card-image">
                         
                         
@@ -1269,7 +1272,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.6k</span>&nbsp;字
+                class="white-color">12.7k</span>&nbsp;字
             
             
             
