@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数学之美——傅立叶变换的本质, Seth&#39;s Blogs">
+    <meta name="keywords" content="(他山之石)一天太长，而十年却很短, Seth&#39;s Blogs">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数学之美——傅立叶变换的本质 | Seth&#39;s Blogs</title>
+    <title>(他山之石)一天太长，而十年却很短 | Seth&#39;s Blogs</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数学之美——傅立叶变换的本质</h1>
+                    <h1 class="description center-align post-title">(他山之石)一天太长，而十年却很短</h1>
                 </div>
             </div>
         </div>
@@ -367,12 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">
-                                <span class="chip bg-color">微积分</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%82%85%E7%AB%8B%E5%8F%B6/">
-                                <span class="chip bg-color">傅立叶</span>
+                            <a href="/tags/%E7%BF%BB%E8%AF%91/">
+                                <span class="chip bg-color">翻译</span>
                             </a>
                         
                     </div>
@@ -383,8 +379,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
-                                数学
+                            <a href="/categories/%E4%BA%BA%E7%94%9F/" class="post-category">
+                                人生
                             </a>
                         
                     </div>
@@ -396,21 +392,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-21
+                    2021-01-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-05
+                    2021-01-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.1k
                 </div>
                 
 
@@ -432,96 +428,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>数学之美——傅立叶变换的本质</h1>
-<h2 id="引言">引言</h2>
-<p>本文从物理学角度切入浅析了傅立叶变换的本质，用通俗的语言来阐释什么是傅立叶变换，并简单说明了一些傅立叶变换的现实应用原理。相信阅读本文后，读者能对傅立叶变换的重要性有更为深刻直观的认识。</p>
+                <h1>一天太长，而十年却很短</h1>
 <blockquote>
-<ul>
-<li>世界上的许多事物之间的相互作用都是基于波。</li>
-<li>人可以听到、看到事物本身就很不可思议。</li>
-<li>看见是因为我们的眼睛接受光波，听见是因为我们的耳朵能接受声波，而主要的是我们的大脑能够将这些波进行处理，得到其中的信息。那么我们的大脑究竟如何做到这一点的呢？</li>
-<li>美颜软件是怎么做到磨皮的？音频和图片压缩是怎么做到的？无线通信又是如何做到的？下面的视频中的字母是如何画出来的？</li>
-</ul>
+<p>本文翻译自Sam Altman的blog《The days are long but the decades are short》<br>
+是美国企业家，投资者，程序员和博客作者。他是OpenAI的首席执行官和Y Combinator的前总裁<br>
+[原文链接]: <a href="https://blog.samaltman.com/the-days-are-long-but-the-decades-are-short" target="_blank" rel="noopener">https://blog.samaltman.com/the-days-are-long-but-the-decades-are-short</a> “[Sam Altman]The days are long but the decades are short”</p>
 </blockquote>
-<p><img src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH.GIF" alt="100个向量绘制图形" title="100个向量绘制图形"><br>
-其实这一切的最根本的原理都是——傅立叶变换。</p>
-<hr>
-<h2 id="何为傅立叶变换">何为傅立叶变换</h2>
-<h3 id="波的叠加">波的叠加</h3>
-<p>要理解傅立叶变换首先要知道，<strong>波是具有可叠加的特性的</strong>。我们高中物理中学到过的，我现在依然较为深刻的，<a href="https://baike.baidu.com/item/%E6%B3%A2%E7%9A%84%E5%B9%B2%E6%B6%89/257113?fr=aladdin" target="_blank" rel="noopener">波的干涉（百度百科）</a>，讲的就是同种介质中的波相互影响而最后呈现出一种新的波。波的叠加后，有的地方振幅增强，有的地方振幅减弱，有的不变。例子就是向平静的湖面扔两块石头，所形成的波浪。</p>
-<p>理解了波的可叠加性，我们就知道原来世界上很多事物都是以波的形式存在的，而其实他们就是由一个又一个“简单的”波而叠加形成的 (<a href="https://zh.wikipedia.org/zh/%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7" target="_blank" rel="noopener">量子力学：波粒二象性(维基百科)</a>)。<em>他最核心区别于经典力学的想法就是：微观粒子时而表现出波动性，时而表现出粒子性。而波动具有的波长和频率意味着在空间和时间上，波动具有延伸性</em>。</p>
-<h3 id="物理学上傅立叶变换的本质——波叠加的“逆向工程”">物理学上傅立叶变换的本质——波叠加的“逆向工程”</h3>
-<p><strong>傅立叶变换：一种线性积分变换，用于信号在<u>时域</u><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>（或空域）和<u>频域</u><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>之间的变换。</strong><br>
-简而言之，就是将自然界复杂的信号，拆分成为基本成分的过程。而为了达到此目的，使用了一种叫做“线性积分变换”的数学方法（后面在“傅立叶变换的数学原理”会介绍）。</p>
-<blockquote>
-<p><a href="http://www.jezzamon.com/fourier/zh-cn.html" target="_blank" rel="noopener" title="傅立叶变换交互式入门">点击了解傅立叶变换过程可视化展示</a></p>
-</blockquote>
-<p><strong>时域波信号</strong>由傅立叶变换被分解出来的基本组成单元正弦波，包含了<strong>振幅</strong>、<strong>相位</strong>，以及它们本身具有的<strong>频率</strong>，既是说傅立叶变换后得到的正弦波们具有：<strong>频率</strong>、<strong>相位</strong>、<strong>振幅</strong>这三个信息。（因为我们更多遇到的是在时间维度而不是空间维度的信号，于是本文主要探讨时域信号&lt;其实是我对空间上的变化一无所知&gt;）</p>
-<p>反过来说，要叠加为一个“不规则”（即自然界中的信号）的波形，其实是在时间轴上不同频率正弦波在同一时间振幅叠加而得的，相位也起到了错位的作用。<br>
-有的人说 傅立叶变换所得的正弦波是三维的，也就是它们在振幅、相位，和频率这三个维度上。</p>
-<p>所说的信号从时域向频域转换，实质上就是把在时域的三个维度（时间、振幅、相位）转变到频域的三个维度（频率、振幅、相位）。各位可以自己画出三维坐标系体会一下。</p>
-<h3 id="离散or连续">离散or连续</h3>
-<div align=center>
-<img style="width:50%;height:45%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E6%88%AA%E5%B1%8F2020-06-22%20%E4%B8%8A%E5%8D%881.31.43.png "align=center />
-</div>
-对于连续的时域信号，分周期性和非周期性信号，它们所对应的频域信号分别是连续的和离散的。
-<p>有限个不同频率的弦波所做的叠加，构成的波，如果对它进行傅立叶变换，得到的频谱图，频率维度的取值就是离散的。这对应于傅立叶级数。</p>
-<p>而一般情况下，自然界中的信号都是可以有无限个弦波叠加而来的，我们无法把它们穷举出来。而且这些自然界信号都是非周期性的。对应于连续傅立叶变换。</p>
-<div align=center>
-<img src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E7%A6%BB%E6%95%A3%E5%92%8C%E8%BF%9E%E7%BB%AD.jpeg " alt="离散和连续频谱图" />
-<p> <i>请原谅我的字丑。。。</i></p>
-</div>
-<p>这也是为什么在连续傅立叶变换时使用的数学工具需要用到“积分变换”——针对连续问题。</p>
-<hr>
-<h2 id="傅立叶变换的数学原理">傅立叶变换的数学原理</h2>
-<h3 id="线性代数角度看傅立叶变换的本质——线性变换">线性代数角度看傅立叶变换的本质——线性变换</h3>
-<p>前面我们提到，傅立叶变换是将时域信号转换为频域信号，它们可以看成是三维空间。而傅立叶变换可以看成信号（向量）是从时域三维空间线性变换到频域三维空间。</p>
-<p>因此我们可以把傅立叶变换前的三维空间用一组<strong>正交基</strong>（1，sinwt，coswt）来描述。</p>
-<p>试想我们如果用变换前的波形（向量）来点乘一个与在sinwt与coswt面上的向量（这里我们一般用的是<u>sinwt+icoswt</u> <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> <strong>欧拉公式</strong>），那么与w不相关的部分都会被消掉（垂直向量的点积为0），于是我们就得到分解出来的弦波（分连续和离散两种情况，离散就是弦波相加&lt;傅立叶级数&gt;，连续可看作是无穷区间上的定积分）。</p>
-<h3 id="欧拉公式——复平面与三角函数的桥梁"><a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F" target="_blank" rel="noopener" title="欧拉公式">欧拉公式</a>——复平面与三角函数的桥梁</h3>
-<p><img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/oula.png "/><img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F.png "/></p>
-<p>由于欧拉公式的存在，那么我们很容易想到，把上面的复平面 sinwt+icoswt（正交向量线性组合，可以扩展向量空间维度），替换为<strong>e</strong>的-i𝛚t次方（加负号不影响代表该平面，在复平面上角速度方向变为顺时针）。<br>
-于是我们就得到了连续傅立叶变换的表达式：</p>
-<img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E8%BF%9E%E7%BB%AD%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2.png" align=center />
-<img style="width:50%;height:50%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%A7%92%E9%80%9F%E5%BA%A6.png" align=center />
-<!--![连续傅立叶变换][连续傅立叶变换]-->
-<hr>
-<h2 id="傅立叶变换的应用">傅立叶变换的应用</h2>
-<h3 id="1-利用傅立叶变换原理来绘制图形（曲线拟合曲线）">1.利用傅立叶变换原理来绘制图形（曲线拟合曲线）</h3>
-<div align=center>
-<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_30v.GIF" />
-<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_50v.GIF"  />
-<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH.GIF"/>
-<img style="width:40%;height:40%" src="http://driver.idongxu.com.cn/ImgHost/2020-06-22/FourierOfSETH_1000v.GIF"/>
-</div>
-动图依次是由30个、50个，100个，1000个傅立叶变换所得弦波拟合我所自定义图形的过程。
-<p>其中的圆表示的是各个频率正弦波，半径为振幅，向量箭头初始位置由相位决定，圆转一周的速度由频率决定，所有的向量叠加决定了该时间点最后指向的位置。</p>
-<blockquote>
-<p>动图由 <strong>manim</strong>生成，它是一个基于Python的可视化项目，由3Blue1Brown提供。<br>
-<a href="https://github.com/3b1b/manim" target="_blank" rel="noopener">manim_Github</a></p>
-</blockquote>
-<p><strong>从曲线拟合的角度来看，相较于泰勒用直线拟合曲线的做法，傅立叶是用曲线来拟合曲线。</strong></p>
-<h3 id="2-人脑就是一个高级傅立叶运算器">2.人脑就是一个高级傅立叶运算器</h3>
-<p>人的大脑就像是一台能够进行傅立叶变换的机器，它能分清楚不同波段的声音，不同波段的光线。这也是名侦探柯南剧场版颤栗的乐谱中“绝对音感”的依据。</p>
-<h3 id="3-照片磨皮、音频压缩等原理">3.照片磨皮、音频压缩等原理</h3>
-<p>而美颜和图片、音频压缩是因为，低频决定框架，高频确定细节（就像我动图展示的那样，叠加越多高频正弦波，越接近“完美”），我们可以利用这一点，适当减少高频，来使得原来的媒体在总体不变的情况下，降低大小或是减少细节。</p>
-<h2 id="结语">结语</h2>
-<p>总之，(连续)傅立叶变换是一种线性积分变换，用于信号在时域（或空域）到频域之间的变换。它的数学原理就是线性变换，然后如果频率是连续的（时域连续非周期），那么就需要进行积分。而傅立叶级数是把类似的波表示成为简单弦波的组合，对应的是时域连续周期性信号。利用这些原理我们可以解析信号，压缩拟合等；反过来我们可以用符合特征的弦波叠加为所需的信号。</p>
-<p>由于能力时间有限，不足或错漏之处还请海涵，并恳请不吝赐教。</p>
-<p><a href="https://charlesliuyx.github.io/2018/02/18/%E3%80%90%E7%9B%B4%E8%A7%82%E8%AF%A6%E8%A7%A3%E3%80%91%E8%AE%A9%E4%BD%A0%E6%B0%B8%E8%BF%9C%E5%BF%98%E4%B8%8D%E4%BA%86%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%9E%90/" target="_blank" rel="noopener">友链，作为补充</a></p>
-<h2 id="注解">注解</h2>
-<!--[连续傅立叶变换]: http://i1.fuimg.com/721720/e1437990f22475f0.png "连续傅立叶变换表达式"-->
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>描述数学函数或物理信号对时间的关系。例如一个信号的时域波形可以表达信号随着时间的变化。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>指在对函数或信号进行分析时，分析其和频率有关部份，而不是和时间有关的部份，和时域一词相对。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn3" class="footnote-item"><p>复数实际上是一种用一个数就能标识二维坐标的标记，通过这种写法我们可以表示一个平面。此处这个平面是振幅和相位的二维平面。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
+<p>上周我刚满三十岁，一个朋友问我有没有过去十年的人生经验可以传授。虽然有些犹豫，但我还是将我的回答发布了出来。</p>
+<p>1、永远不要把你的家人、朋友和对你有重要意义的人放在你优先级清单的后部。一个有力的真朋友胜过100个熟人。不要和老朋友失去联系。时不时的和他们相谈直到太阳落山、或是去参加聚会。</p>
+<p>2、生活不是彩排，它很真实。放下吧，时光是多么有限，白驹过隙的。去做那些让你开心充实的事情，因为很少有人在归位尘土的几百年后还有人铭记。不去做那些让你不开心的事情（这常常发生在有人想让你做一些事情的时候）不要花时间去维持与你不喜欢的人的关系上，从生活中剪除消极的人。不要让自己给做想做的事情找借口。</p>
+<p>3、如何成功：选择正确的事情去做（这至关重要，但是往往被忽略了），专注，相信自己（特别是当别人说不行的的时候），发展那些会帮助你的人际关系，学会辨别有材之人，并努力。找到为之奋斗的事业是很难的，因为原创性思维本来就很难。</p>
+<p>4、对工作：在你不关心的事情上想要作出成就是很难的事情。如果你不喜欢你效力于的工作，想获得完全的幸福感和充实感是不可能的。努力工作吧，惊人数量的人们与你做着相同的工作，要是你不够努力，那么你很可能就会与余生擦家而过。不论做什么职业，都要以世界之最为依照，专业让你出类拔萃。即使你没能达到，那至少你也会结束于一个不错的位置（取乎上者，得其中）。摸清楚你自己的生产力系统，不要浪费时间在杂乱无章之中，或是在次佳时间工作。不要害怕职业风险，特别是早期。多数人选择他们的生涯的时候几乎是随机的——好好认真思考喜欢什么，在什么领域能取得成功，尝试和那些领域的成功人士咨询。</p>
+<p>5、关于金钱：不论金钱是否可以买来幸福，但它确实可以买来自由，这是一件大事。相反，缺钱是鸭梨山大的。几乎在所有方面，有足够的钱让你不至于担心交不起租金比起买得起飞机更能提升幸福感。赚钱总是比花钱更有趣，即使如此我也从不后悔那些花在朋友们身上、新的经历、节省时间、旅行和我所信仰的事物上的钱。</p>
+<p>6、多与人焦交流。多读书少看类似微博之类的快餐文。少看电视，少上网，不刷抖音。</p>
+<p>7、不要浪费时间，多数人都浪费了他们的大部分时间，特别是在生意上。</p>
+<p>8、不要随波逐流。就像Paul Graham（保罗·格雷厄姆，美国著名程序员、风险投资家、博客作者和技术作家。他以Lisp方面的工作而知名，也是最早的Web应用Viaweb的创办者之一，后来以近5千万美元价格被雅虎收购，成为Yahoo! Store）说过“人可以变得很强大，但是很难预料那个人是谁。（自信于自傲有很大区别，我们应该着眼于前者）</p>
+<p>9、每天、每年、每十年都保持清晰的目标。</p>
+<p>10、但是，当机会来临时，抓住机会同计划有同样的价值。不要惧怕做一些轻率的事情，努力工作的一个好处就是好机会会随之而来，但是当他们到来时是否使用它们完全看你的意愿。</p>
+<p>11、用你的方式多于睿智、有趣、有志向的人待在一起，为他们工作、雇佣他们（事实上，工作最使人满意的部分之一就是能够和真正不错的人建立深厚的关系）。试着去把时间花在这些人身上，不管是领域中的翘楚还是尚未崭露头角的璞玉。你的圈子决定你是什么人这句话是真的。</p>
+<p>12、最小化你在心理上那些会分散你精力的琐事的投入。这极其重要，大多数人都做的不好。远离生活中让你分心的事物。找到自己的方法来避免让你不喜欢的事情越叠越多，追著你跑。再來就是要了解你的情緒，特別是在工作上的。</p>
+<p>13、不要随便发火。随之而来的，是给你带来众多的人生机会。</p>
+<p>14、夏天是最好的</p>
+<p>15、不要过度担心，人生中很少有事情和他们看起来一样有风险。多数人都过于在意风险，因此多数的建议都是偏向于保守的路线。</p>
+<p>16、追寻你所想。</p>
+<p>17、如果你认为你你会为不做某事而后悔，你可能就应该去做。后悔是最糟糕的事情，多数人都更为没做而不是做了而感到后悔。若是不确定，就吻下去。</p>
+<p>18、锻炼、吃好、睡好。定期走出去亲近自然。</p>
+<p>19、以自己的方式去帮助他人。人生不如意十有八九。对陌生人好一点，即使这没多重要。</p>
+<p>20、年轻是很棒的一件事，勿负韶华。事实上，在你20多岁的时候，我认为以一种“现在可以多了解金融原则，单不需要急于实践”的态度是可以的，因为即使是世上所有的金钱也无法赎回你逝去的青春。</p>
+<p>21、经常和父母说你爱他们。尽可能的多回家看他们。</p>
+<p>22、无论好坏，都会过去的。</p>
+<p>23、求知若渴。</p>
+<p>24、经常尝试新的事物，这应该真的很重要。不仅因为新的事物能够延缓对时间的感知，增加幸福感，使生活充满乐趣，同时也能使人们免于思想固化。每年都着眼于你个人生活和职业生涯中的大而新鲜有带点风险的事。</p>
+<p>25、记得当你是个纯真少年时你多么纯粹的爱你的男/女朋友吗？就像那样去爱你现在的另一半。记得你童年时为之兴奋和快乐的事情吗？找回那份兴奋和快乐吧。</p>
+<p>26、不要搞坏关系。万事留一线，日后好相见。开战前谨慎思考一下。</p>
+<p>27、宽恕别人。</p>
+<p>28、不要追求地位，没有基础的地位是昙花一现的空中楼阁。</p>
+<p>29、万事把握好度，物极必反。</p>
+<p>30、有关存在主义的焦虑是生活的一部分，在经历了重大人生事件或职业里程碑后就更为明显。特别是聪明又有志向的人。有些人埋首工作的一个原因就是这样他们就不会有多的时间来思考这个了。若你感受到了这些，这很正常，很多人都这样，不要担心。</p>
+<p>31、心怀感念，深入透彻的看待问题。不要太多抱怨，不要仇视别人的成功（有人就会仇视你的成功，学会忽略）</p>
+<p>32、做个实践家，不做空想家。</p>
+<p>33、只要有足够时间，不论好事坏事，都会调整过来，人就是这么强大。</p>
+<p>34、三思而后行，生气时先收住，想几分钟。</p>
+<p>35、不要太快就判断一个人，你可能不了解整个故事，和他们这么做/不这么做的原因。学会共情。</p>
+<p>36、一天太长，而十年却很短。</p>
 
             </div>
             <hr/>
@@ -547,7 +496,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.idongxu.com.cn/2020/06/21/shu-xue-zhi-mei-fu-li-xie-bian-huan-de-ben-zhi/">http://blog.idongxu.com.cn/2020/06/21/shu-xue-zhi-mei-fu-li-xie-bian-huan-de-ben-zhi/</a>
+                    <a href="http://blog.idongxu.com.cn/2021/01/28/ta-shan-zhi-shi-yi-tian-tai-chang-er-shi-nian-que-hen-duan/">http://blog.idongxu.com.cn/2021/01/28/ta-shan-zhi-shi-yi-tian-tai-chang-er-shi-nian-que-hen-duan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -585,12 +534,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">
-                                    <span class="chip bg-color">微积分</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%82%85%E7%AB%8B%E5%8F%B6/">
-                                    <span class="chip bg-color">傅立叶</span>
+                                <a href="/tags/%E7%BF%BB%E8%AF%91/">
+                                    <span class="chip bg-color">翻译</span>
                                 </a>
                             
                         </div>
@@ -1021,57 +966,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/07/15/shu-ju-jie-gou-yu-suan-fa-cha-zhao/">
+                <a href="/2021/01/28/ta-shan-zhi-shi-yi-tian-tai-chang-er-shi-nian-que-hen-duan/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/18.jpg" class="responsive-img" alt="数据结构与算法——查找">
+                        <img src="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/6.jpg" class="responsive-img" alt="(他山之石)一天太长，而十年却很短">
                         
-                        <span class="card-title">数据结构与算法——查找</span>
+                        <span class="card-title">(他山之石)一天太长，而十年却很短</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            查找
-引言
+                            一天太长，而十年却很短
 
-查找是算法当中最为基本的一类算法。计算机运算的本质就是对于数据的操作，不论从宏观还是微观来看，计算机所做的事情都是，数据输入-数据处理-数据输出。但是由于计算机运算器的结构决定了，我们不能把所有数据都存储在运算器中，取而代之的
+本文翻译自Sam Altman的blog《The days are long but the decades are short》
+是美国企业家，投资者，程序员和博客作者。他是OpenAI的首席执行官和Y Comb
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
+                            <a href="/categories/%E4%BA%BA%E7%94%9F/" class="post-category">
+                                    人生
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">二分查找</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%A3%E5%88%97%E8%A1%A8/">
-                        <span class="chip bg-color">散列表</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
-                        <span class="chip bg-color">二叉搜索树</span>
+                    <a href="/tags/%E7%BF%BB%E8%AF%91/">
+                        <span class="chip bg-color">翻译</span>
                     </a>
                     
                 </div>
@@ -1082,32 +1021,29 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/21/shu-xue-zhi-mei-fu-li-xie-bian-huan-de-ben-zhi/">
+                <a href="/2020/10/11/te-zheng-zhi-te-zheng-xiang-liang-yi-ji-xiang-si-dui-jiao-hua-er-ci-xing-de-q-a/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/1.jpg" class="responsive-img" alt="数学之美——傅立叶变换的本质">
+                        <img src="https://cdn.jsdelivr.net/gh/SethDong/SethDong.github.io@07fc870/medias/featureimages/1.jpg" class="responsive-img" alt="线性代数——特征值、特征向量以及相似对角化、二次型的Q&amp;A">
                         
-                        <span class="card-title">数学之美——傅立叶变换的本质</span>
+                        <span class="card-title">线性代数——特征值、特征向量以及相似对角化、二次型的Q&amp;A</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数学之美——傅立叶变换的本质
-引言
-本文从物理学角度切入浅析了傅立叶变换的本质，用通俗的语言来阐释什么是傅立叶变换，并简单说明了一些傅立叶变换的现实应用原理。相信阅读本文后，读者能对傅立叶变换的重要性有更为深刻直观的认识。
-
-
-世界上的许多
+                            特征值、特征向量以及相似对角化、二次型的Q&amp;A
+1、特征值特征向量的本质
+对于一个矩阵来说，它本身可以表示，直角坐标系下以轴方向的标准正交基进行线性变换。这个变换在几何上可以呈现出 拉伸、压缩或者旋转。而我们的相似对角化的目的就是，
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-11
                             </span>
                         <span class="publish-author">
                             
@@ -1121,16 +1057,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">
-                        <span class="chip bg-color">微积分</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%82%85%E7%AB%8B%E5%8F%B6/">
-                        <span class="chip bg-color">傅立叶</span>
+                    <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
+                        <span class="chip bg-color">线性代数</span>
                     </a>
                     
                 </div>
